@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
-    id("dev.alex.gradle.plugin")
+    id("dev.alex.gradle.plugin.buildsrc")
+    id("dev.alex.gradle.plugin.standalone") version "1.0.0"
     kotlin("android")
 }
 

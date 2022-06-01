@@ -8,9 +8,9 @@ repositories {
 
 gradlePlugin {
     plugins {
-        create("GreetingPlugin3") {
-            id = "dev.alex.gradle.plugin"
-            implementationClass = "GreetingPlugin3"
+        create("GreetingPluginBuildSrc") {
+            id = "dev.alex.gradle.plugin.buildsrc"
+            implementationClass = "GreetingPlugin"
             version = "1.0.0"
         }
     }

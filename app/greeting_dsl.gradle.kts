@@ -1,4 +1,4 @@
-public interface GreetingPluginExtension {
+interface GreetingPluginExtension {
     val message: Property<String>
 }
 
@@ -7,9 +7,10 @@ class GreetingDSLPlugin : Plugin<Project> {
         // Add the 'greeting' extension object
         val extension = project.extensions.create<GreetingPluginExtension>("greeting")
         // Add a task that uses configuration from the extension object
-        project.task("dsl_hello") {
+        project.task("helloDsl") {
+            group = "gradle-plugin"
             doLast {
-                println("${extension.message.get()}")
+                println("hello from ${extension.message.get()}")
             }
         }
     }
@@ -20,5 +21,5 @@ apply<GreetingDSLPlugin>()
 
 // Configure the extension using a DSL block
 configure<GreetingPluginExtension> {
-    message.set("Hi")
+    message.set("dsl")
 }

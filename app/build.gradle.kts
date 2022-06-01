@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("dev.alex.gradle.plugin")
     kotlin("android")
 }
 

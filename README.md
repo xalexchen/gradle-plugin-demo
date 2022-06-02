@@ -169,7 +169,7 @@ plugins {
 
 - kotlin-dsl
 
-支持使用kotlin编写插件
+支持dsl，如gradlePlugin
 
 
 
